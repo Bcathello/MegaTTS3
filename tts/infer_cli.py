@@ -77,7 +77,9 @@ class MegaTTS3DiTInfer():
         self.sr = 24000
         self.fm = 8
         if device is None:
-            device = 'cuda' if torch.cuda.is_available() else 'cpu'
+            device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+        else:
+            device = torch.device(device)
         self.device = device
         self.precision = precision
 
@@ -160,6 +162,8 @@ class MegaTTS3DiTInfer():
         self.vae_stride = hp_wavvae.get('vae_stride', 4)
         self.hop_size = hp_wavvae.get('hop_size', 4)
     
+        print(f"Models loaded on device: {device}")
+
     def preprocess(self, audio_bytes, latent_file=None, topk_dur=1, **kwargs):
         wav_bytes = convert_to_wav_bytes(audio_bytes)
 

@@ -22,9 +22,7 @@ from tts.infer_cli import MegaTTS3DiTInfer, convert_to_wav, cut_wav
 
 
 def model_worker(input_queue, output_queue, device_id):
-    device = None
-    if device_id is not None:
-        device = torch.device(f'cuda:{device_id}')
+    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
     infer_pipe = MegaTTS3DiTInfer(device=device)
 
     while True:
@@ -60,11 +58,7 @@ if __name__ == '__main__':
     mp.set_start_method('spawn', force=True)
     mp_manager = mp.Manager()
 
-    devices = os.environ.get('CUDA_VISIBLE_DEVICES', '')
-    if devices != '':
-        devices = os.environ.get('CUDA_VISIBLE_DEVICES', '').split(",")
-    else:
-        devices = None
+    devices = [0] if torch.backends.mps.is_available() else None
     
     num_workers = 1
     input_queue = mp_manager.Queue()
