@@ -102,9 +102,9 @@ The official MegaTTS3 documentation (e.g., [MegaTTS3 README](https://github.com/
 8. **Tune Parameters for Quality**:
    - Initial runs with `time python tts/gradio_api.py` were faster but produced incorrect voice characteristics.
    - Adjusted Gradio parameters to match quality of `python tts/gradio_api.py`:
-     - `Infer Timestep`: 50
-     - `Intelligibility Weight`: 1.0
-     - `Similarity Weight`: 5.0
+     - `Infer Timestep`: 32
+     - `Intelligibility Weight`: 1.4
+     - `Similarity Weight`: 2
    - Verified performance (2x faster with MPS) and quality via the Gradio UI (`http://0.0.0.0:7929`).
 
 **Differences from Official Documentation**:
