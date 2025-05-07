@@ -155,8 +155,9 @@ MegaTTS3 is now fully operational with optimal performance and audio quality on 
   - M1 Max GPU accelerates inference significantly.
 
 - **Audio Quality**:
+  - You need to try adjusting your own parameters; these are just the parameters that suit me.
   - Initial `time python tts/gradio_api.py` runs had poor voice characteristics.
-  - Resolved with `Infer Timestep=50`, `Intelligibility Weight=1.0`, `Similarity Weight=5.0`.
+  - Resolved with `Infer Timestep=50`, `Intelligibility Weight=1.4`, `Similarity Weight=5.0`.
 
 - **Verification**:
   - Terminal output: `Models loaded on device: mps`, `Worker running on device: mps`.
