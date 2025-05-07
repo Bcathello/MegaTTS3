@@ -36,6 +36,10 @@ The official MegaTTS3 documentation (e.g., [MegaTTS3 README](https://github.com/
      ```bash
      pip install pydantic==2.5.0 gradio==5.23.3
      ```
+     or 如果你在中国？前面包括后面的安装可以参考，在pip install {命令最后面指定清华大学} -i https://pypi.tuna.tsinghua.edu.cn/simple
+     ```bash
+     pip install pydantic==2.5.0 gradio==5.23.3 -i https://pypi.tuna.tsinghua.edu.cn/simple
+     ```
 
 4. **Download Checkpoints**:
    - Downloaded MegaTTS3 checkpoints, as per the official guide:
