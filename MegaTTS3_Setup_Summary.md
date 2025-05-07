@@ -46,9 +46,9 @@ The official MegaTTS3 documentation (e.g., [MegaTTS3 README](https://github.com/
      ```bash
      huggingface-cli download ByteDance/MegaTTS3 --local-dir ./checkpoints --local-dir-use-symlinks False
      ```
-   - Verified `.npy` files (WaveVAE latents) exist:
+   - Verified files exist:
      ```bash
-     ls -l checkpoints/*.npy
+     ls -l checkpoints
      ```
 
 5. **Set `PYTHONPATH`**:
