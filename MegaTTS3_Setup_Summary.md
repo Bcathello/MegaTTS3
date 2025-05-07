@@ -242,8 +242,8 @@ MegaTTS3 generates minimal temporary files:
      ```
 
 3. **Optimize Parameters**:
-   - Test `Infer Timestep=75` or `Similarity Weight=6.0` for better quality.
-   - Example: `Infer Timestep=75`, `Intelligibility Weight=1.0`, `Similarity Weight=6.0`.
+   - Test `Infer Timestep=32` or `Similarity Weight=3.0` for better quality.
+   - Example: `Infer Timestep=32`, `Intelligibility Weight=1.4`, `Similarity Weight=3.0`.
 
 4. **Backup Environment**:
    ```bash
