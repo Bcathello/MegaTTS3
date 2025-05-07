@@ -27,6 +27,8 @@ The official MegaTTS3 documentation (e.g., [MegaTTS3 README](https://github.com/
 3. **Install Dependencies**:
    - Installed project dependencies, following the official `requirements.txt` but with macOS-specific adjustments:
      ```bash
+     git clone https://github.com/Bcathello/MegaTTS3.git
+     cd ./MegaTTS3
      pip install -r requirements.txt
      conda install -y -c conda-forge pynini==2.1.5
      pip install WeTextProcessing==1.0.3
